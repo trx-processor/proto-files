@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package trx_deposit_processor;
+
+
+message CreateWalletResponse{
+    string base58Address = 1;
+}
+
+service TrxDepositProcessor {
+    rpc CreateWallet(google.protobuf.Empty) returns (CreateWalletResponse);
+}
