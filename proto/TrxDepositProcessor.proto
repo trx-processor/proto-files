@@ -9,4 +9,5 @@ message CreateWalletResponse{
 
 service TrxDepositProcessor {
     rpc CreateWallet(google.protobuf.Empty) returns (CreateWalletResponse);
+    rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
 }
