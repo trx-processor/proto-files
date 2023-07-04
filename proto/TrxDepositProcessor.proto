@@ -8,6 +8,6 @@ message CreateWalletResponse{
 }
 
 service TrxDepositProcessor {
-    rpc CreateWallet(google.protobuf.Empty) returns (CreateWalletResponse);
+    rpc CreateWallet(google.protobuf.Empty) returns (trx_deposit_processor.CreateWalletResponse);
     rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
 }
