@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package trx_address;
+
+
+message CreateWalletRequest{
+    string clientId=1;    
+}
+
+
+message CreateWalletResponse{
+    string base58Address = 1;
+}
+
+service TrxAddress {
+    rpc CreateWallet(CreateWalletRequest) returns (CreateWalletResponse);
+    rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
