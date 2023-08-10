@@ -3,11 +3,16 @@ import "google/protobuf/empty.proto";
 package trx_deposit_processor;
 
 
+message CreateWalletRequest{
+    string clientId=1;
+}
+
+
 message CreateWalletResponse{
     string base58Address = 1;
 }
 
 service TrxDepositProcessor {
-    rpc CreateWallet(google.protobuf.Empty) returns (trx_deposit_processor.CreateWalletResponse);
+    rpc CreateWallet(CreateWalletRequest) returns (CreateWalletResponse);
     rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
 }
