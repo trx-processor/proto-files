@@ -4,12 +4,12 @@ package trx_address;
 
 
 message CreateWalletRequest{
-    string clientId=1;    
+    string ReferenceId=1;    
 }
 
 
 message CreateWalletResponse{
-    string base58Address = 1;
+    string Base58Address = 1;
 }
 
 service TrxAddress {
