@@ -4,7 +4,7 @@ package trx_deposit_processor;
 
 
 message CreateWalletRequest{
-    string clientId=1;
+    string clientId=1;    
 }
 
 
