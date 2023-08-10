@@ -1,6 +1,6 @@
 syntax = "proto3";
 import "google/protobuf/empty.proto";
-package trx_address;
+package trx_wallet;
 
 
 message CreateWalletRequest{
@@ -12,7 +12,7 @@ message CreateWalletResponse{
     string Base58Address = 1;
 }
 
-service TrxAddress {
+service TrxWallet {
     rpc CreateWallet(CreateWalletRequest) returns (CreateWalletResponse);
     rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
 }
